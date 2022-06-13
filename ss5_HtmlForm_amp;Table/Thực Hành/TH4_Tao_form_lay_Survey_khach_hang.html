@@ -5,17 +5,114 @@
     <title>sumpleform</title>
 </head>
 <body>
-    <form action="">
-        <label>Họ và tên:</label><br>
-        <input type="text" name="hovaten" value=""><br>
-        <label>Email:</label><br>
-        <input type="email" name="email" value=""><br>
-        <label>Số điện thoại:</label><br>
-        <input type="tel" name="tel" value=""><br>
-        <label>Giới tính:</label><br>
-        <input type="radio" name="gender" value="Nam">Nam
-        <input type="radio" name="gender" value="Nữ">Nữ
-        <p><input type="submit" name="submit" value="Đăng ký"></p>
-    </form>
+<div>
+    <ul>
+        <li>
+            <h3>Market Research Survey</h3>
+            <p>Plaease take a few moments to complete this satisfaction survey</p>
+        </li>
+        <li>
+            <label>What is your age range?</label>
+            <select>
+                <option>18-24</option>
+                <option>25-34</option>
+                <option>35-50</option>
+                <option>50+</option>
+            </select>
+        </li>
+        <label>What is your yearly income range?</label>
+        <select>
+            <option>$0 - $25,000</option>
+            <option>$25,000 - $50,000</option>
+            <option>$50,000 - $100,000</option>
+            <option>$100,000+</option>
+        </select>
+        <li>
+            <fieldset>
+                <legend>Gender identity</legend>
+                <div>
+                    <span><input type="radio" name="gender" value="male"> Male<br></span>
+                    <span><input type="radio" name="gender" value="Female"> Female<br></span>
+                    <span><input type="radio" name="gender" value="Nonbinary"> Nonbilary<br></span>
+                    <span><input type="radio" name="gender" value="Other"> Other</span><br>
+                    <input type="text" name="gender" value="">
+                    <p>Maximum of 250 characters.       <em>Currently Used: 0 characters</em></p>
+                </div>
+            </fieldset>
+
+        </li>
+        <fieldset>
+            <legend>Which of the following products have your purchased in the last 2 moth. Please check all that apply.</legend>
+            <div>
+                <span><input type="checkbox">Product 1</span><br>
+                <span><input type="checkbox">Product 2</span><br>
+                <span><input type="checkbox">Product 3</span>
+            </div>
+        </fieldset>
+        <li>
+            <fieldset>
+                <legend>How often would you use our new product?</legend>
+                <div>
+                    <span><input type="radio">Daily</span><br>
+                    <span><input type="radio">Weekly</span><br>
+                    <span><input type="radio">Monthly</span>
+                </div>
+            </fieldset>
+        </li>
+        <li>
+            <label>What would you pay for the new product?</label>
+            <span>$</span>
+            <span><input type="text" value="" size="5"><label>Dollars</label></span>
+            <span>.</span>
+            <span><input type="text" value="" size="1"><label>Cents</label></span>
+        </li>
+        <li>
+            <label>What features would you like to see in the new product.</label>
+            <span><textarea name="vb" cols="100" rows="5"></textarea></span>
+        </li>
+        <li>
+            <p>Please rate your level of agreement with the following statements</p>
+            <table border="1">
+                <tr>
+                    <th></th>
+                    <td>Strongly Disagree</td>
+                    <td>Disagree</td>
+                    <td>Agree</td>
+                    <td>Strongly Agree</td>
+                </tr>
+                <tr>
+                    <th>Our products are priced fairly.</th>
+                    <td><input type="radio" name="lv1" value="1"><label>1</label></td>
+                    <td><input type="radio" name="lv1" value="2"><label>2</label></td>
+                    <td><input type="radio" name="lv1" value="3"><label>3</label></td>
+                    <td><input type="radio" name="lv1" value="4"><label>4</label></td>
+                </tr>
+                <tr>
+                    <th>Our products are high quality.</th>
+                    <td><input type="radio" name="lv2" value="1"><label>1</label></td>
+                    <td><input type="radio" name="lv2" value="2"><label>2</label></td>
+                    <td><input type="radio" name="lv2" value="3"><label>3</label></td>
+                    <td><input type="radio" name="lv2" value="4"><label>4</label></td>
+                </tr>
+                <tr>
+                    <th>You would recommenf our product to a friend or coworker.</th>
+                    <td><input type="radio" name="lv3" value="1"><label>1</label></td>
+                    <td><input type="radio" name="lv3" value="2"><label>2</label></td>
+                    <td><input type="radio" name="lv3" value="3"><label>3</label></td>
+                    <td><input type="radio" name="lv3" value="4"><label>4</label></td>
+                </tr>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <span><input type="submit" name="submit" value="Submit"></span>
+            </div>
+        </li>
+    </ul>
+
+
+
+</div>
 </body>
 </html>
