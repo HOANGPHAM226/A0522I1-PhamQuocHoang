@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #rim{
+            width: 500px;
+            height: 110.5px;
+        }
+        #rim-heading{
+            text-align: center;
+        }
+        .heading__title{
+            display: inline-block;
+            text-align: center;
+        }
+        #heading__color{
+            color: blue ;
+        }
+        .title__frm{
+            width: 100px;
+            height: 22.5px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset id="rim">
+            <legend id="rim-heading">Ứng dụng chuyển đổi tiền tệ</legend><br>
+            <div class="heading__title">
+                <label><strong>Amount</strong></label><br>
+                <input type="text" id="title__amount">
+            </div>
+            <div class="heading__title">
+                <label><strong>Form Currency</strong></label><br>
+                <select class="title__frm" id="title__fromCurrency">
+                    <option>VietNam</option>
+                    <option>USD</option>
+                </select>
+            </div>
+            <div class="heading__title">
+                <label><strong>To Currency</strong></label><br>
+                <select class="title__frm" id="title__toCurrency">
+                    <option>USD</option>
+                    <option>VietNam</option>
+                </select>
+            </div>
+            <button type="button" class="heading__frm" onclick="function__calculator();">Convert</button>
+            <div><p id="heading__color">Result: <span id="heading__result"></span></p></div>
+        </fieldset>
+    </form>
+</body>
+<script>
+    function function__calculator(){
+        let amount = document.getElementById('title__amount').value;
+        let fromCurrency = document.getElementById('title__fromCurrency').value;
+        let toCurrency = document.getElementById('title__toCurrency').value;
+        let count = 0;
+        if(fromCurrency == "VietNam" && toCurrency == "VietNam"){
+            count = parseInt(amount) + " VND";
+        }else if(fromCurrency == "USD" && toCurrency == "USD"){
+            count = parseInt(amount) + " USD";
+        }else if(fromCurrency == "VietNam" && toCurrency == "USD"){
+            count = parseInt(amount)*0.00004 + " USD";
+        }else if(fromCurrency == "USD" && toCurrency == "VietNam"){
+            count = parseInt(amount)*23230.00000 + " VND";
+        }
+        document.getElementById('heading__result').innerHTML = count;
+    }
+</script>
+
+</html>

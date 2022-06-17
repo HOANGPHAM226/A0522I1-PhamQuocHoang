@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lesson-one</h1>
+    input_Physics: <input type="text" id="physics">
+    <br><br>
+    input_Chemistry: <input type="text" id="chemistry">
+    <br><br>
+    input_Biology: <input type="text" id="biology">
+    <br><br>
+    Operater
+    <select id="operater">
+        <option>Average</option>
+        <option>Sum</option>
+    </select>
+    <br><br>
+    Result
+    <input type="text" id="result">
+    <br><br>
+    <button onclick="Function__average__sum();">Submit</button>
+    <hr>
+    <h1>Chuyển Giá Trị 0C -> 0F</h1>
+    Input0C: <input type="text" id="celsius">
+    <br><br>
+    Fahrenheit: <input type="text" id="fahrenheit">
+    <br><br>
+    <button onclick="myFunction_two();">Submit</button>
+    <hr>
+
+    <h1>Circle area (Diện tích hình tròn)</h1>
+    Input R: <input type="text" id="input_circleArea">
+    <br><br>
+    Output CircleArea: <input type="text" id="output_circleArea">
+    <br><br>
+    <button onclick="function_circleArea();">Submit</button>
+    <hr>
+
+    <h1>Perimeter circle (Chu vi hình tròn)</h1>
+    Input R: <input type="text" id="input_circlePerimeter">
+    <br><br>
+    Output PerimeterCirle: <input type="text" id="output_circlePerimeter">
+    <br><br>
+    <button onclick="function_circlePerimeter();">Submit</button>
+</body>
+<script>
+    function Function__average__sum() {
+        let physics = document.getElementById('physics').value;
+        let chemistry = document.getElementById('chemistry').value;
+        let biology = document.getElementById('biology').value;
+        let operater = document.getElementById('operater').value;
+        let result = 0;
+        if (operater == "Average") {
+            result = (parseInt(physics) + parseInt(chemistry) + parseInt(biology)) / 3;
+        } else if (operater == "Sum") {
+            result = parseInt(physics) + parseInt(chemistry) + parseInt(biology);
+        }
+        document.getElementById('result').value = result;
+    }
+    function myFunction_two() {
+        let C = document.getElementById('celsius').value;
+        let F = parseInt(C) / 5 * 9 + 32;
+
+        document.getElementById('fahrenheit').value = F;
+    }
+    function function_circleArea() {
+        let input_S_R = document.getElementById('input_circleArea').value;
+        let output_S_R = parseInt(input_S_R) * parseInt(input_S_R) * 3.14;
+        document.getElementById('output_circleArea').value = output_S_R;
+    }
+    function function_circlePerimeter(){
+        let input_C_R = document.getElementById('input_circlePerimeter').value;
+        let output_C_R = parseInt(input_C_R) * 2 * 3.14;
+        document.getElementById('output_circlePerimeter').value = output_C_R;
+    }
+</script>
+
+</html>
